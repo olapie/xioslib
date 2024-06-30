@@ -28,12 +28,7 @@ open class CustomTextField: UITextField {
         backgroundImageView.image = image
         backgroundImageView.contentMode = .scaleToFill
         superview!.addSubview(backgroundImageView)
-        backgroundImageView.translatesAutoresizingMaskIntoConstraints = false
-        backgroundImageView.leadingAnchor.constraint(equalTo: superview!.layoutMarginsGuide.leadingAnchor).isActive = true
-        backgroundImageView.trailingAnchor.constraint(equalTo: superview!.layoutMarginsGuide.trailingAnchor).isActive = true
-        backgroundImageView.topAnchor.constraint(equalTo: superview!.layoutMarginsGuide.topAnchor).isActive = true
-        backgroundImageView.bottomAnchor.constraint(equalTo: superview!.layoutMarginsGuide.bottomAnchor).isActive = true
-       
+        backgroundImageView.edgesEqualToView(self)
     }
     
   
