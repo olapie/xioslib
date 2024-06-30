@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import Reachability
 
 open class WifiDetector {
     let reachability = try! Reachability()
