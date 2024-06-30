@@ -139,7 +139,7 @@ open class VideoCameraController: UIViewController, PreviewViewDelegate, VideoCa
     private func configure() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
-            if getDefaultVideoDevice() == nil {
+            if AVCaptureDevice.getDefaultVideoDevice() == nil {
                 let alertController = UIAlertController(title: Translate("CameraUnavailable"), message: nil, preferredStyle: .alert)
                 self.show(alertController, sender: nil)
                 return

@@ -7,14 +7,14 @@
 
 import Foundation
 
-func GetAppVersion() -> String {
+public func GetAppVersion() -> String {
     Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String ?? ""
 }
 
-func GetAppBuildNumber() -> String {
+public func GetAppBuildNumber() -> String {
     Bundle.main.infoDictionary?["CFBundleVersion"] as? String ?? ""
 }
 
-func GetAppDisplayName() -> String {
+public func GetAppDisplayName() -> String {
     Bundle.main.object(forInfoDictionaryKey: "CFBundleDisplayName") as? String ?? ""
 }

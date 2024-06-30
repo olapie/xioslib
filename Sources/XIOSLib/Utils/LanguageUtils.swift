@@ -7,8 +7,7 @@
 
 import Foundation
 
-
-func GetLocalLanguage() -> String {
+public func GetLocalLanguage() -> String {
     if #available(iOS 16, *) {
         guard let lang = Locale.current.language.languageCode?.identifier else {
             return "en"

@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UITableViewCell {
+public extension UITableViewCell {
     func tableView() -> UITableView? {
         var v: UIView? = self
         while v != nil {

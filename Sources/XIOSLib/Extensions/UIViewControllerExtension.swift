@@ -7,12 +7,14 @@
 
 import UIKit
 
+public let DefaultSectionHeaderHeight: CGFloat = 20
+public let DefaultCellHeight: CGFloat = 50
 
-protocol InstantiatableViewController {
+public protocol InstantiatableViewController {
     func instantiateViewController() -> Self
 }
 
-extension UIViewController {
+public extension UIViewController {
     @objc class func instantiateViewController() -> Self {
         if let _ = self as? InstantiatableViewController {
             return wrapperInstantiateViewController()

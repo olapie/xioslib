@@ -7,8 +7,7 @@
 
 import UIKit
 
-
-extension UITextField {
+public extension UITextField {
     func trimmedText() -> String {
         return text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
     }

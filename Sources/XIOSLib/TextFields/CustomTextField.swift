@@ -11,12 +11,12 @@ import UIKit
 let CustomTextFieldBackgroundImageViewTag = 12389
 
 @IBDesignable
-class CustomTextField: UITextField {
+open class CustomTextField: UITextField {
     @IBInspectable
     var horizontalTextPadding: CGFloat = 8
     private var addedBackground = false
 
-    override func didMoveToSuperview() {
+    public override func didMoveToSuperview() {
         super.didMoveToSuperview()
         self.borderStyle = .none
         if addedBackground {
@@ -37,12 +37,12 @@ class CustomTextField: UITextField {
     }
     
   
-    override func textRect(forBounds bounds: CGRect) -> CGRect {
+    open override func textRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.textRect(forBounds: bounds)
         return rect.insetBy(dx: horizontalTextPadding, dy: 0)
     }
 
-    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+    open override func editingRect(forBounds bounds: CGRect) -> CGRect {
         let rect = super.editingRect(forBounds: bounds)
         return rect.insetBy(dx: horizontalTextPadding, dy: 0)
     }

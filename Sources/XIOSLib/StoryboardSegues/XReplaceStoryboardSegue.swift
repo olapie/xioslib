@@ -7,10 +7,10 @@
 
 import UIKit
 
-class XReplaceStoryboardSegue: UIStoryboardSegue {
+open class XReplaceStoryboardSegue: UIStoryboardSegue {
     @IBInspectable var animated = true
     
-    override func perform() {
+    open override func perform() {
         guard let navigationController = self.source.navigationController else {
             return
         }

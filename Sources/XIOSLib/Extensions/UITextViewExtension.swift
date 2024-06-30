@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UITextView {
+public extension UITextView {
     func trimmedText() -> String {
         return text?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
     }

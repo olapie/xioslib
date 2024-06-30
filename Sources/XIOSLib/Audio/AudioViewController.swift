@@ -166,7 +166,7 @@ open class AudioViewController: UIViewController {
             self.titleLabel.isHidden = false
             self.stopButton.isHidden = false
             self.recordButton.isHidden = true
-            self.timerLabel.text = "00:00"
+            self.timerLabel.text = "00:00:00"
             self.timerLabel.isHidden = false
             
             startTimer()
@@ -181,7 +181,7 @@ open class AudioViewController: UIViewController {
         self.stopButton.isHidden = true
         self.recordButton.isHidden = false
         self.timerLabel.isHidden = true
-        self.timerLabel.text = "00:00"
+        self.timerLabel.text = "00:00:00"
         let elapse = endTimer()
         guard let recorder = self.recorder else {
             return
@@ -204,7 +204,7 @@ open class AudioViewController: UIViewController {
                 return
             }
             clock += 1
-            strongSelf.timerLabel.text = String(format: "%02d:%02d", clock / 60, clock % 60)
+            strongSelf.timerLabel.text = String(format: "%02d:%02d:%02d", clock / 3600, (clock % 3600) / 60, clock % 60)
         }
     }
     

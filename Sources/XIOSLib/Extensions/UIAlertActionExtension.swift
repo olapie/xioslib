@@ -7,7 +7,7 @@
 
 import UIKit
 
-extension UIAlertAction {
+public extension UIAlertAction {
     func setSystemImageName(_ name: String) {
         let config = UIImage.SymbolConfiguration(scale: .large)
         self.setValue(UIImage(systemName: name, withConfiguration: config), forKey: "image")

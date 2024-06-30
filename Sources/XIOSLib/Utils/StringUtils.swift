@@ -7,7 +7,7 @@
 
 import Foundation
 
-func Translate(_ key: String) -> String {
+public func Translate(_ key: String) -> String {
     let s = NSLocalizedString(key, comment: "")
 //    assert(!s.elementsEqual(key), "Missing " + key)
     return s

@@ -14,7 +14,7 @@ protocol PreviewViewDelegate: NSObjectProtocol {
     func previewDidTap(_ devicePoint: CGPoint, layerPoint: CGPoint)
 }
 
-class PreviewView: UIView {
+open class PreviewView: UIView {
     private var focusView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
     weak var delegate: PreviewViewDelegate? {
         didSet {
@@ -42,7 +42,7 @@ class PreviewView: UIView {
         }
     }
     
-    override class var layerClass: AnyClass {
+    open override class var layerClass: AnyClass {
         return AVCaptureVideoPreviewLayer.self
     }
     

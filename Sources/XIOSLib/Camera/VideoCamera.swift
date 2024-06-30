@@ -38,7 +38,7 @@ open class VideoCamera: NSObject, AVCaptureFileOutputRecordingDelegate {
             session.commitConfiguration()
         }
         session.sessionPreset = .photo
-        guard let device = getDefaultVideoDevice() else {
+        guard let device = AVCaptureDevice.getDefaultVideoDevice() else {
             return
         }
         self.input = try? AVCaptureDeviceInput(device: device)

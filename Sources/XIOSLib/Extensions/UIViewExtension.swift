@@ -135,4 +135,13 @@ extension UIView {
         self.widthAnchor.constraint(equalToConstant: width).isActive = true
         self.heightAnchor.constraint(equalToConstant: height).isActive = true
     }
+    
+    
+    func printSubViews(_ indence: String) {
+        print(indence + self.description)
+        let subIndence = "  " + indence
+        self.subviews.forEach { v in
+            v.printSubViews(subIndence)
+        }
+    }
 }
